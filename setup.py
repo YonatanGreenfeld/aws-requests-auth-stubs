@@ -22,6 +22,7 @@ setup(
     author_email="yonatangreenfeld97@gmail.com",
     description="PEP 561 stubs for aws-requests-auth",
     long_description=readme,
+    long_description_content_type="text/markdown",
     url="https://github.com/YonatanGreenfeld/aws-requests-auth-stubs",
     license="MIT",
     packages=["aws_requests_auth-stubs"],
