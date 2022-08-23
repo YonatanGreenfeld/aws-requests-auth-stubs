@@ -67,6 +67,6 @@ jobs:
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `Release of django-stubs failure on ${new Date().toDateString()}`,
+              title: `Release failed on ${new Date().toDateString()}`,
               body: `Details: check action`,
             })
