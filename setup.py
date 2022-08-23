@@ -17,7 +17,7 @@ with open("README.md") as f:
 
 setup(
     name="aws_requests_auth-stubs",
-    version="0.4.3",
+    version="0.4.3.1",
     author="Yonatan Greenfeld",
     author_email="yonatangreenfeld97@gmail.com",
     description="PEP 561 stubs for aws-requests-auth",
