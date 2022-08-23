@@ -1,5 +1,6 @@
-from setuptools import setup
 import os
+
+from setuptools import setup
 
 
 def find_stubs(package):
@@ -11,21 +12,35 @@ def find_stubs(package):
     return {package: stubs}
 
 
+with open("README.md") as f:
+    readme = f.read()
+
 setup(
     name="aws_requests_auth-stubs",
-    maintainer="Yonatan Greenfeld",
-    maintainer_email="yonatangreenfeld97@gmail.com",
-    description="PEP 561 type stubs for aws-requests-auth",
+    version="0.4.3",
+    author="Yonatan Greenfeld",
+    author_email="yonatangreenfeld97@gmail.com",
+    description="PEP 561 stubs for aws-requests-auth",
+    long_description=readme,
     url="https://github.com/YonatanGreenfeld/aws-requests-auth-stubs",
     license="MIT",
-    version="0.4.3",
     packages=["aws_requests_auth-stubs"],
+    python_requires=">=3.7",
     # PEP 561 requires these
     install_requires=[
         "aws-requests-auth>=0.4.3",
         "botocore-stubs>=1.27.42",
+        "types-requests>=2.25.0",
         'typing_extensions>=3.7.4; python_version<"3.8"',
     ],
     package_data=find_stubs("aws_requests_auth-stubs"),
-    zip_safe=False,
+    classifiers=[
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Typing :: Typed",
+    ],
 )
